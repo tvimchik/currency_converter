@@ -17,7 +17,7 @@ response = requests.get(url)
 if response.status_code == 200:
     print('Все работает!')
     date = response.json()
-    print(f'Пример курса: 1 USD = {date['conversion_rates'] ['EUR']} EUR')
+    print(f'Курс: 1 USD = {date['conversion_rates'] ['RUB']} RUB')
 else:
     print(f'API НЕ ОТВЕЧАЕТ: КОД ОШИБКИ {response.status_code}')
     print(f'Сообщение от сервера: {response.text}')
